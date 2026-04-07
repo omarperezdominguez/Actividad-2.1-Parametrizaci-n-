@@ -8,7 +8,7 @@ clear all; close all; clc;
 % --- CONFIGURACIÓN DE ANIMACIÓN ---
 paso = 0.01; % Resolución de t
 
-%% a) Línea Recta Inclinada
+% a) Línea Recta Inclinada
 t = -2:paso:2;
 x = 2*t;
 y = (t - 3*t)/3;
