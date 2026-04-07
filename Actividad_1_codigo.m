@@ -1,26 +1,27 @@
 % =====================================================
 % Actividad 2.1: Parametrización de Trayectorias
+% Alumno: Omar
 % =====================================================
 
 clear all; close all; clc;
 
 % TRAYECTORIA 1: El Círculo (Radio = 2)
-% Se define t de 0 a 2*pi para cerrar el ciclo completo.
+% Se define t de 0 a 2*pi para completar una vuelta
 t1 = 0:0.01:2*pi;
 x1 = 2 * cos(t1);
 y1 = 2 * sin(t1);
 
 figure(1)
-comet(x1, y1) % Simula el movimiento temporal
+comet(x1, y1) 
 grid on; axis equal;
 title('1. Trayectoria Circular (R=2)');
 xlabel('x [m]'); ylabel('y [m]');
 
 % TRAYECTORIA 2: Figura en Infinito (Lissajous)
-% La clave aquí es que la frecuencia en Y es el doble que en X.
+% Frecuencia en Y es el doble (2*t) que en X (t)
 t2 = 0:0.01:2*pi;
 x2 = sin(t2); 
-y2 = sin(2*t2); % Frecuencia doble genera el cruce central
+y2 = sin(2*t2); 
 
 figure(2)
 comet(x2, y2)
@@ -29,7 +30,7 @@ title('2. Curva de Lissajous (Infinito)');
 xlabel('x [m]'); ylabel('y [m]');
 
 % TRAYECTORIA 3: Parametrización Compleja (Epitrocoide)
-% Se combinan dos movimientos circulares: uno lento y uno rápido (15 veces más)
+% Suma de una frecuencia lenta (t) y una rápida (15*t)
 t3 = 0:0.005:2*pi;  
 x3 = 1.5 * cos(t3) + cos(15 * t3);
 y3 = 1.5 * sin(t3) + sin(15 * t3);
